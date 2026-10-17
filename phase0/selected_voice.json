@@ -1,0 +1,9 @@
+{
+  "engine": "kokoro",
+  "model": "hexgrad/Kokoro-82M",
+  "voice": "am_michael",
+  "language": "American English",
+  "speed": 0.95,
+  "status": "Selected by owner after audition on 2026-10-17",
+  "measured_full_story_words_per_minute": 155.6
+}
