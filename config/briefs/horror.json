@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "genre": "horror",
+  "premise": "A museum caretaker finds fresh footprints inside a sealed exhibit after closing. With a former conservator's written notes, the caretaker discovers that a damaged mirror is replaying the final steps of someone trapped inside it. The rules of the mirror must be established before the caretaker uses them to escape.",
+  "tags": ["closed museum", "footsteps", "haunted mirror"],
+  "tone": "atmospheric suspense, restrained humor before the danger, no gore",
+  "ending": "A complete explanation of the footprints and a concrete earned escape; no final sequel twist.",
+  "target_minutes": 18,
+  "seed": 84
+}

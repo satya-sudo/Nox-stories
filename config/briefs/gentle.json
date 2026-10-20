@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "genre": "gentle",
+  "premise": "A retired baker teaches a shy new neighbor to make bread for a community meal. The baker is experienced and owns the kitchen; the neighbor is a beginner who works night shifts as a nurse. A failed first batch and a scheduling problem must be solved through patience and practical cooperation.",
+  "tags": ["community", "bread", "new friendship"],
+  "tone": "sweet, grounded, affectionate, gently funny",
+  "ending": "They share a simple meal and the neighbor feels welcome; let the final gesture carry the emotion without a moral lecture.",
+  "target_minutes": 18,
+  "seed": 126
+}

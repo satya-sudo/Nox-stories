@@ -1,6 +1,6 @@
 # Nox Stories — architecture v1
 
-Planning baseline: 17 October 2026. This document specifies the proposed system; it does not represent an implemented or benchmarked application.
+Planning baseline: 17 October 2026. Updated 20 October 2026 with the Phase 1 implementation. The CLI production pipeline is implemented and undergoing live acceptance tests; the dashboard and publishing portions remain planned. See `docs/PHASE1.md` for the actual current workflow.
 
 ## 1. Product and decisions
 
@@ -53,8 +53,8 @@ Heavy work is globally serialized across all episodes: LLM generation, speech sy
 | Component | Choice | Reason |
 | --- | --- | --- |
 | Dashboard | React + TypeScript + Vite | Episode editor, media preview, queue and settings |
-| API and orchestration | Python 3.11 + FastAPI + Pydantic | Shared language with speech and media tooling; validated contracts |
-| Database | SQLite in WAL mode; SQLAlchemy + Alembic | Durable local state with migrations |
+| API and orchestration | Python 3.12 + Pydantic; FastAPI planned for the dashboard phase | Shared language with speech and media tooling; validated contracts |
+| Database | SQLite in WAL mode with an explicit schema version | Durable local state; Phase 1 uses the standard library directly |
 | Queue | SQLite jobs table + one Python worker | Restart recovery without another queue service |
 | Story runtime | Ollama localhost HTTP API | Local model loading, inference, and unloading |
 | First story candidate | `qwen3:4b-instruct-2507-q4_K_M` | Small quantized instruct model; must pass local evaluation |
@@ -147,9 +147,9 @@ Resumable sessions allow transfer recovery. If completion becomes ambiguous, rec
 
 Store a versioned narrator profile with name, personality, language, voice/model identifiers, speed, pronunciation dictionary, intro/outro style, portrait, and channel wording.
 
-Proposed creative direction, awaiting the owner's choices: a calm storyteller with a warm, slightly mysterious delivery. Nox is the framing narrator; characters remain part of the story. All dialogue uses Nox's voice initially. Nox's appearance and exact personality remain open; American English Michael is the selected starting voice.
+Nox's narrative character is now a warm, dryly funny, slightly cheeky night owl with a soft heart. His humor comes from concrete observations and his own questionable confidence. He gets serious during danger or emotional moments. Nox stays outside the plot, with at most two short body asides in eligible setup scenes. See `docs/NOX.md` and the versioned `config/nox.v1.json`. All dialogue initially uses American English Michael. Visual appearance remains undecided; no character artwork is required for this phase.
 
-Voice auditions should use the same short passage with dialogue, suspense, fantasy names, and a gentle ending. The owner selected American English Michael after listening to the Phase 0 samples. Other aspects of Nox's personality and visual identity remain open.
+The owner selected American English Michael after listening to the Phase 0 samples. Narrative identity is established in version 1; visual identity remains open.
 
 ## 5. Dashboard and owner flow
 
@@ -277,6 +277,6 @@ Later extensions: more backgrounds, slow image motion, precise captions, additio
 
 ## 9. Open choices and next action
 
-The architecture can proceed without deciding Nox's appearance immediately. Before producing channel-ready material, choose the exact voice/accent, Nox personality and portrait, default horror intensity/audience, and channel branding. Confirm YouTube channel availability during the integration phase.
+The voice and narrative character are selected. Nox's appearance can be decided later. Before channel-ready production, settle default horror intensity/audience and channel branding. Confirm YouTube channel availability during the integration phase.
 
-Next implementation action after architecture agreement: Phase 0 hardware and narration spike. Do not build the full dashboard before proving that the story/voice combination can produce a satisfactory full-length episode on the available machine.
+Current work: Phase 1 live acceptance and editorial improvements. Keep the full dashboard for Phase 2, after validating reliable story production on the available machine.

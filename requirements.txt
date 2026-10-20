@@ -1,0 +1,2 @@
+-r phase0/requirements.txt
+pydantic>=2.10,<3

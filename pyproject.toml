@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nox-stories"
+version = "0.1.0"
+description = "A local narrated-story production pipeline"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "kokoro==0.9.4",
+  "transformers>=4.45,<5",
+  "huggingface-hub>=0.30,<1",
+  "torch>=2.5,<3",
+  "imageio-ffmpeg>=0.6,<0.7",
+  "Pillow>=11,<13",
+  "espeakng-loader>=0.2.4,<0.3"
+]
+
+[project.scripts]
+nox-stories = "nox.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["nox*"]

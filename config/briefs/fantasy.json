@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "genre": "fantasy",
+  "premise": "A bridge tollkeeper and a young dragon must guide a misplaced raincloud to a drought-stricken orchard. Their practical disagreements slowly become a friendship. The tollkeeper handles maps and routes; the dragon can guide wind but cannot create water.",
+  "tags": ["unlikely friendship", "raincloud", "small acts of courage"],
+  "tone": "warm, adventurous, gently witty",
+  "ending": "The rain reaches the orchard through the pair's own choices, with a sincere hopeful resolution.",
+  "target_minutes": 18,
+  "seed": 42
+}

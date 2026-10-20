@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 *.log
 phase0/preflight.json
+*.egg-info/
+build/
+dist/
